@@ -7,7 +7,7 @@ use WebService::Toggl::Request;
 use Moo::Role;
 
 has api_key => (is => 'ro');
-has server => (is => 'ro', default => 'https://www.toggl.com');
+has server => (is => 'ro', default => 'https://api.track.toggl.com');
 
 has _request => (is => 'ro', lazy => 1, builder => 1);
 sub _build__request { WebService::Toggl::Request->new({
